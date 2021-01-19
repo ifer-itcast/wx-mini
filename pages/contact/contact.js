@@ -1,18 +1,45 @@
-// pages/contact/contact.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    colorList: [],
+    isLoading: false // 可以发起请求
+  },
+  /**
+   * 获取随机颜色
+   */
+  getColors() {
+    this.setData({
+      isLoading: true // 正在请求
+    });
+    wx.showLoading({
+      title: '数据加载中...'
+    });
+    wx.request({
+      url: 'https://www.escook.cn/api/color',
+      success: ({
+        data: res
+      }) => {
+        this.setData({
+          colorList: [...this.data.colorList, ...res.data]
+        });
+      },
+      complete: () => {
+        wx.hideLoading();
+        this.setData({
+          isLoading: false // 可以发起请求
+        });
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getColors();
   },
 
   /**
@@ -54,7 +81,9 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    // 正在请求，则打回去
+    if (this.data.isLoading) return;
+    this.getColors();
   },
 
   /**
