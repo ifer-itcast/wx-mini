@@ -18,7 +18,7 @@
       "selectedIconPath": "/images/tabs/home-active.png"
     },{
       "pagePath": "pages/message/message",
-      "text": "首页",
+      "text": "消息",
       "iconPath": "/images/tabs/message.png",
       "selectedIconPath": "/images/tabs/message-active.png"
     },{
