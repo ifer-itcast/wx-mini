@@ -69,6 +69,13 @@
         {
           "name": "联系我们",
           "pathName": "pages/contact/contact",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商铺列表",
+          "pathName": "pages/shoplist/shoplist",
+          "query": "id=1&title=美食",
           "scene": null
         }
       ]
