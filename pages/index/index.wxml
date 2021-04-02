@@ -5,4 +5,5 @@
   <my-test2 count="{{count}}" bind:add="addCount"></my-test2>
   <!-- 局部注册的 -->
   <view class="line"></view>
+  <my-test3></my-test3>
 </view>
