@@ -1,0 +1,11 @@
+<!--pages/index/index.wxml-->
+<text>pages/index/index.wxml</text>
+<view>
+  <!-- 局部注册的 -->
+  <my-test1/>
+</view>
+
+<view class="red">
+  <!-- 全局注册的的 -->
+  <my-test/>
+</view>
