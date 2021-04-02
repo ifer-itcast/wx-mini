@@ -1,0 +1,6 @@
+<view>
+  子 {{count}}
+  <view>
+    <button bindtap="addCount">+1</button>
+  </view>
+</view>

@@ -1,7 +1,8 @@
 <!--pages/index/index.wxml-->
 <view>
+  父
+  {{count}}
+  <my-test2 count="{{count}}" bind:add="addCount"></my-test2>
   <!-- 局部注册的 -->
-  <my-test1 max="9"/>
   <view class="line"></view>
-  <my-rgb></my-rgb>
 </view>
