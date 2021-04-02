@@ -1,5 +1,8 @@
 // components/rgb/rgb.js
 Component({
+  options: {
+    pureDataPattern: /^_/
+  },
   /**
    * 组件的属性列表
    */
@@ -11,7 +14,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    rgb: {
+    _rgb: {
       r: 0,
       g: 0,
       b: 0
@@ -25,17 +28,17 @@ Component({
   methods: {
     changeR() {
       this.setData({
-        'rgb.r': this.data.rgb.r >= 255 ? 255 : this.data.rgb.r + 5
+        '_rgb.r': this.data._rgb.r >= 255 ? 255 : this.data._rgb.r + 5
       })
     },
     changeG() {
       this.setData({
-        'rgb.g': this.data.rgb.g >= 255 ? 255 : this.data.rgb.g + 5
+        '_rgb.g': this.data._rgb.g >= 255 ? 255 : this.data._rgb.g + 5
       })
     },
     changeB() {
       this.setData({
-        'rgb.b': this.data.rgb.b >= 255 ? 255 : this.data.rgb.b + 5
+        '_rgb.b': this.data._rgb.b >= 255 ? 255 : this.data._rgb.b + 5
       })
     }
   },
@@ -45,7 +48,7 @@ Component({
         fullColor: `${r}, ${g}, ${b}`
       })
     } */
-    'rgb.**': function(obj) {
+    '_rgb.**': function(obj) {
       this.setData({
         fullColor: `${obj.r}, ${obj.g}, ${obj.b}`
       })
