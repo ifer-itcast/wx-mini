@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "my-test1": "/components/test/test"
+    "my-test1": "/components/test/test",
+    "my-rgb": "/components/rgb/rgb"
   }
 }

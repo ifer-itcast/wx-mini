@@ -1,6 +1,7 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
 <view>
   <!-- 局部注册的 -->
   <my-test1 max="9"/>
+  <view class="line"></view>
+  <my-rgb></my-rgb>
 </view>

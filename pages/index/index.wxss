@@ -1,1 +1,5 @@
-/* pages/index/index.wxss */
+.line {
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  border-top: 1px solid red;
+}
