@@ -40,6 +40,15 @@ Component({
       this.setData({
         '_rgb.b': this.data._rgb.b >= 255 ? 255 : this.data._rgb.b + 5
       })
+    },
+    _randomColor() {
+      this.setData({
+        _rgb: {
+          r: Math.floor(Math.random() * 256),
+          g: Math.floor(Math.random() * 256),
+          b: Math.floor(Math.random() * 256),
+        }
+      })
     }
   },
   observers: {
@@ -52,6 +61,11 @@ Component({
       this.setData({
         fullColor: `${obj.r}, ${obj.g}, ${obj.b}`
       })
+    }
+  },
+  pageLifetimes: {
+    show() {
+      this._randomColor()
     }
   }
 })
